@@ -7,20 +7,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
 </head>
 <body>
     <nav class="navbar">
         <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
+            <li><a href="#home" class="hvr-underline-from-center">Home</a></li>
+            <li><a href="#about" class="hvr-underline-from-center">About</a></li>
+            <li><a href="#projects" class="hvr-underline-from-center">Projects</a></li>
         </ul>
     </nav>
 
     <section id="home" class="hero">
-        <div class="hero-content">
+        <div class="hero-content" data-aos="flip-left" data-aos-duration="1000">
             <h1>Hey, I'm Rylen Anil</h1>
             <p class="hero-subtitle">Part-time High School Student</p>
             <p class="hero-subtitle second-line">Full-time Developer & Cyber Security Engineer</p>
@@ -28,17 +30,22 @@
                 <i class="fas fa-map-marker-alt"></i>
                 Based in UAE, Dubai
             </p>
-            <a href="https://github.com/rylena" target="_blank" class="github-link">
-                <i class="fab fa-github"></i>
-            </a>
+            <div class="social-links">
+                <a href="https://github.com/rylena" target="_blank" class="social-icon hvr-float">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
             <div class="hero-cta">
                 <a href="#projects" class="cta-button scroll-link">View My Work</a>
             </div>
         </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+        </div>
     </section>
 
     <section id="about" class="about">
-        <div class="card about-card">
+        <div class="card about-card" data-aos="flip-right" data-aos-duration="1000">
             <h2 class="section-title">About Me</h2>
             <p>
                 I'm a 15-year-old high school student passionate about technology and software development. Currently focused on Full Stack Development and Cyber Security Engineering, I've developed strong experience with Linux systems and various programming technologies.
@@ -48,7 +55,7 @@
             </p>
         </div>
 
-        <div class="card technologies-card">
+        <div class="card technologies-card" data-aos="flip-left" data-aos-duration="1000">
             <h2 class="section-title">Technologies</h2>
             <div class="tech-grid">
                 <div class="tech-item">
@@ -120,28 +127,38 @@
 
     <section id="projects" class="projects">
         <div class="card main-card">
-            <h2 class="section-title">My Projects</h2>
+            <h2 class="section-title" data-aos="flip-up" data-aos-duration="800">My Projects</h2>
             <div class="projects-grid">
-                <div class="project-card">
+                <div class="project-card" data-aos="flip-right" data-aos-duration="1000" data-aos-delay="100" onclick="window.open('https://rylena.github.io/Counseltron/', '_blank')">
                     <img src="assets/counsel.png" alt="Counseltron Logo" class="project-logo">
                     <h3>Counseltron</h3>
                     <p>An AI-powered virtual counselor built with a handcrafted LLM, designed to provide accessible and empathetic counseling for students who feel they can't talk to anyone.</p>
-                    <a href="https://rylena.github.io/Counseltron/" target="_blank" class="project-link github">
-                        <i class="fab fa-github"></i> View Project
+                    <a href="https://rylena.github.io/Counseltron/" target="_blank" class="project-link">
+                        View Project
                     </a>
                 </div>
-                <div class="project-card">
+                <div class="project-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="200" onclick="window.open('https://github.com/SmartStep-Inc', '_blank')">
                     <img src="assets/smartstep.png" alt="SmartStep Logo" class="project-logo">
                     <h3>SmartStep</h3>
                     <p>An innovative smart shoe designed to assist visually impaired individuals through real-time obstacle detection and auditory feedback, integrating LiDAR sensors and ESP32 microcontrollers.</p>
-                    <a href="https://github.com/SmartStep-Inc" target="_blank" class="project-link github">
-                        <i class="fab fa-github"></i> View Project
+                    <a href="https://github.com/SmartStep-Inc" target="_blank" class="project-link">
+                        View Project
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true, // animations only happen once
+            offset: 200 // offset (in px) from the original trigger point
+        });
+    </script>
     <script src="script.js"></script>
+    <footer>
+        <p>© 2024 Rylen Anil. Made with <i class="fas fa-heart"></i></p>
+    </footer>
 </body>
 </html>     

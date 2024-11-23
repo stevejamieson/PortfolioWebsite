@@ -87,6 +87,8 @@ body {
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 0.8s ease forwards;
+    color: #fff;
+    font-weight: 600;
 }
 
 .hero-subtitle {
@@ -519,4 +521,27 @@ section {
 
 .tech-item:hover {
     transform: scale(1.05); /* Makes tech cards pop out slightly on hover */
+}
+
+/* Add this new animation */
+@keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.gradient-text {
+    background: linear-gradient(
+        120deg,
+        #64ffda 0%,
+        #63f 25%,
+        #ff6b6b 50%,
+        #63f 75%,
+        #64ffda 100%
+    );
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradientFlow 8s ease infinite;
 }
